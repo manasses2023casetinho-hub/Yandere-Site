@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Yandere Test</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(120deg, #ffffff, #b18cff);
+      background-size: 300% 300%;
+      animation: gradiente 6s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    @keyframes gradiente {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .caixa {
+      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(160,100,255,0.4);
+      max-width: 320px;
+    }
+
+    h1 {
+      color: #6a2cff;
+    }
+
+    button {
+      background: #6a2cff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    img {
+      width: 180px;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 0 0 15px rgba(100,0,200,0.4);
+    }
+
+    .descricao {
+      margin-top: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="caixa" id="inicio">
+    <h1>Yandere Test</h1>
+    <p>Doce por fora. Perigosa por dentro.</p>
+    <button onclick="entrar()">Entrar</button>
+  </div>
+
+  <div class="caixa" id="personagem" style="display:none;">
+    <img src="natsu.jpg" alt="Natsu">
+    <h1>Natsu</h1>
+    <p class="descricao">
+      Uma estudante de aparência calma e delicada,  
+      mas com sentimentos intensos e obsessivos escondidos.
+    </p>
+  </div>
+
+  <script>
+    function entrar() {
+      document.getElementById("inicio").style.display = "none";
+      document.getElementById("personagem").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
